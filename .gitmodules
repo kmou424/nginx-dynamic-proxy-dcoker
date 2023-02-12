@@ -1,0 +1,3 @@
+[submodule "nginx-dynamic-proxy"]
+	path = nginx-dynamic-proxy
+	url = https://github.com/kmou424/nginx-dynamic-proxy
