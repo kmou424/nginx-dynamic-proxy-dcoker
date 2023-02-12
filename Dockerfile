@@ -13,8 +13,6 @@ RUN echo "stream {" >> /etc/nginx/nginx.conf \
 
 COPY nginx-dynamic-proxy ./nginx-dynamic-proxy-src
 
-RUN ls
-
 RUN cd nginx-dynamic-proxy-src \
  && go build -o "nginx-dynamic-proxy" \
  && mv nginx-dynamic-proxy .. \
@@ -22,4 +20,3 @@ RUN cd nginx-dynamic-proxy-src \
  && rm -r nginx-dynamic-proxy-src
 
 CMD nginx -g "daemon off;" > /dev/null 2>&1 & /etc/nginx/stream.d/nginx-dynamic-proxy
-# CMD nginx
